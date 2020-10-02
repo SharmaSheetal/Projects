@@ -1,0 +1,364 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* css variables */
+:root{
+    --navbar-height:59px;
+}
+/* Navigation bar: logo and image */
+#logo{
+    margin:10px 10px;
+}
+#logo img{
+    margin:11px 11px;
+    height: 72px;
+}
+
+/* Navigation bar: List Styling */
+#navbar{
+    display: flex;
+    align-items: center;
+    /* position: relative;  to set all */
+    /* position:absolute; */
+    position: sticky;
+    top: 0px;
+}
+#navbar #list{
+    display: flex;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+/* applying padding effect here will not allow us to do the effect which is done during the hover*/
+#navbar #list li{ 
+list-style: none;
+font-size: 1.3rem;
+}
+/*apply padding here*/
+#navbar #list >li >a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+#navbar::before{
+    content: "";
+    background-color: #961919;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.8;
+}
+#navbar #list li a:hover{
+    color:black;
+    background-color: white;
+}
+#navbar #log_in button{
+    position: absolute;
+    top: 12px;
+    right: 34px;
+    display: inline-block;
+}
+#navbar #list #sublist{
+    display: none;
+}
+#navbar #list li:hover> #sublist{
+    display: block;
+}
+#navbar #sublist li a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 63px;
+    top: 0px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    padding: 3px 200px;
+    align-items: center;
+    justify-content: center;
+}
+#home::before{
+    content: "";
+    background: url('../images/back.jpeg') no-repeat center center/cover;
+    position: absolute;
+    height: 642px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index:-1;
+    opacity: 0.3;
+}
+#home:hover{
+    background: url('../images/bg.png') no-repeat center center/cover;
+    transition: all 1s ease-in-out;
+}
+#home h1{
+    color: #961919;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color:#961919;
+    font-size: 1.5rem;
+    text-align: center;
+font-family: 'Bree Serif', serif;
+}
+/*LOG IN section*/
+#login{
+    position: relative;
+}
+#login::before{
+content: "";
+position: absolute;
+width: 100%;
+height:100vh;
+z-index: -1;
+opacity: 0.3;
+background: url('../images/back.jpeg') no-repeat center center/cover;
+}
+#login:hover{
+    background: url('../images/bg.png') no-repeat center center/cover;
+    transition: all 1s ease-in-out;
+    height: 100vh;
+}
+#login-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px ;
+}
+#login-box form{
+    width: 30%;
+    height:30%;
+}
+#login-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#login-box input,
+#login-box textarea{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 9px;
+    font-size: 1.3rem;
+}
+#login-box a{
+    text-decoration: none;
+    color: brown;
+}
+/* aside{
+    display:flex;
+    position: absolute;
+    background: url('../images/quote.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
+} */
+
+/*Contact Section*/
+#contact{
+    position: relative;
+}
+#contact::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.7;
+background: url('../images/contactus.png') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px ;
+}
+.contact-info{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.card{
+    background: #2f3542;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    width: calc(33% -  20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+.img{
+    background:white;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    width: calc(33% -  20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+.card-icon{
+    font-size: 28px;
+    background: brown;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+
+}
+.card:hover .card-icon{
+    background: none;
+    color: #ff6348;
+    transform: scale(1.6);
+}
+.card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3 linear;
+
+}
+blockquote{
+    display: flex;
+    position: relative;
+    width: 50%;
+    margin: 5rem auto;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    color: #1785b5;
+}
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+
+blockquote::before{
+    content: '\201c';
+    top: 10px;
+    left: -40px;
+    
+}
+blockquote::after{
+    content: '\201d';
+    bottom: -30px;
+}
+blockquote::before,
+blockquote::after{
+    font-size: 6rem;
+    position: absolute;
+}
+blockquote cite{
+    display: block;
+    position: absolute;
+    font-size: 0.8rem;
+    font-style: normal;
+    line-height: 1.2;
+    color: #888;
+    top: 120%;
+    padding-left: 70px;
+
+}
+blockquote cite a{
+    color: #333;
+    
+}
+blockquote cite a:hover{
+    color: #1785b5;
+
+}
+blockquote cite::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+
+}
+/* Product Section */
+#product::before{
+    content:"";
+    position: absolute;
+    background: url('../images/pb.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.8;
+}
+#product img{
+    border: 2px solid brown;
+    
+    height: 124px;
+    width: 250px;
+}
+.product-item{
+    padding: 34px;
+
+}
+#product{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Utility Class */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size: 1.2rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    padding: 6px 20px;
+    border:2px solid rgb(59, 15, 15);
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
