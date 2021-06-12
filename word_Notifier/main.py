@@ -14,13 +14,9 @@ if __name__ == '__main__':
                 continue
            m = list(value.values())
            k=list(value.keys())
-           if m== None:
-               continue
            for i in range(len(m)):
               l=[]
               for j in range(len(m[i])):
-                if m[i][j]==None:
-                    continue
                 s = f"{k[i]} \n{j+1}:{m[i][j]}"
                 l.append(s)
            toast.show_toast(word.title(),"\n"+("\n".join(l)).title(), duration=12,
